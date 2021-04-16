@@ -12,8 +12,9 @@ def add_result():
     list_result = Game(player1_name, player1_choice_move, player2_name, player2_choice_move)
     return render_template('index.html', title="Welcome", games=games)
 
-# @app.route("/rock/scissors")
-# def rock_scissors_win
+@app.route("/rock/scissors")
+def play_game(player1_name, player2_name):
+    return f"{player1_name} wins by playing {player1_choice_move}"
 
 # @app.route("/rock/paper")
 # def rock_paper_loss
