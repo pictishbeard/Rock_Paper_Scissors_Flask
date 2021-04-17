@@ -1,6 +1,6 @@
 from models.player import Player
 
-player1 = ("Not Aaron", "Scissors")
-player2 = ("Stranger", "Rock")
+player_1 = ("Not Aaron")
+player_2 = ("Stranger")
 
-list_players = [player1, player2]
+list_players = [player_1, player_2]

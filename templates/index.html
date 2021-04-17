@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/game_style.css">
     <title>Rock/Paper/Scissors Browser Game</title>
 </head>
 <body>
@@ -12,12 +13,10 @@
             Rock Paper Scissors
         </h1>
     </header>
-    {% for play_game in game %}
-    <div id="outcome_list">
+    <div id="welcome_text">
         <p>
-            {{ list_players.list_players }}
+            Welcome to Rock Paper Scissors! To begin please enter your choices into the address bar above e.g. 127.0.0.1:5000/rock/scissors
         </p>
     </div>
-    {% endfor %}
 </body>
 </html>

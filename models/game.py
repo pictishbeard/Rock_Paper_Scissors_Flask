@@ -1,16 +1,17 @@
 from models.player import Player
 from models.list_players import *
 
-def play_game(move1, move2):
-    if move1 == "Rock" and move2 == "Scissors":
-        return f"{list_players.player1} wins by playing {list_players.move1}"
-
-    if move1 == "Scissors" and move2 == "Paper":
-        return f"{list_players.player1} wins by playing {list_players.move1}"
+def winning_player(gesture1, gesture2):
+    if gesture1 == "rock" and gesture2 == "scissors":
+        return f"{player_1} wins with rock!"
+        
+    if gesture1 == "scissors" and gesture2 == "paper":
+        return f"{player_1} wins with scissors!"
+        
+    if gesture1 == "paper" and gesture2 == "rock":
+        return f"{player_1} wins with paper!"
     
-    if move1 == "Paper" and move2 == "Rock":
-        return f"{list_players.player1} wins by playing {list_players.move1}"
-
-    if move1 == move2:
-        return "Game ends in a draw!"
-        return f"{list_players.player2} wins by playing {list_players.move2}"
+    if gesture1 == gesture2:
+        return "draw"
+        
+    return player_2
