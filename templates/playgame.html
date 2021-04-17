@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock/Paper/Scissors Browser Game</title>
+    <title>{{ title }} - Game In Progress</title>
 </head>
 <body>
-    <header id="header">
+    <header>
         <h1>
-            Rock Paper Scissors
+            Result
         </h1>
     </header>
-    {% for play_game in game %}
-    <div id="outcome_list">
-        <p>
-            {{ list_players.list_players }}
-        </p>
-    </div>
-    {% endfor %}
+    <div>
+    <p>
+        The winner is {{ winner }}!
+    </p>
+</div>
 </body>
+
 </html>

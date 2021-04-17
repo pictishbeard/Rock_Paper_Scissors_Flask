@@ -1,20 +1,16 @@
-from models.player import *
+from models.player import Player
+from models.list_players import *
 
-game1 = Player("Aaron", "Rock", "Not Aaron", "Scissors")
-game2 = Player("Joe", "Scissors", "Not Aaron", "Paper")
-game3 = Player("Adam", "Paper", "Not Aaron", "Paper")
+def play_game(move1, move2):
+    if move1 == "Rock" and move2 == "Scissors":
+        return f"{list_players.player1} wins by playing {list_players.move1}"
 
-games = [game1, game2, game3]
-
-if player1_choice_move == "Rock" and player2_choice_move == "Scissors":
-    return f"{player1_name} wins by playing {player1_choice_move}"
-
-if player1_choice_move == "Scissors" and player2_choice_move == "Paper":
-    return f"{player1_name} wins by playing {player1_choice_move}"
+    if move1 == "Scissors" and move2 == "Paper":
+        return f"{list_players.player1} wins by playing {list_players.move1}"
     
-if player1_choice_move == "Paper" and player2_choice_move == "Rock":
-    return f"{player1_name} wins by playing {player1_choice_move}"
+    if move1 == "Paper" and move2 == "Rock":
+        return f"{list_players.player1} wins by playing {list_players.move1}"
 
-if player1_choice_move == player2_choice_move:
-    return "Game ends in a draw!"
-return f"{player2_name} wins by playing {player2_choice_move}"
+    if move1 == move2:
+        return "Game ends in a draw!"
+        return f"{list_players.player2} wins by playing {list_players.move2}"

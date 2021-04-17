@@ -1,20 +1,23 @@
 from flask import render_template, request
 from app import app
-from models.game import games
+from models.list_players import list_players
+from models.game import play_game
 from models.player import Player
+
 
 @app.route("/")
 def index():
-    return render_template('index.html', title="Welcome", games=games)
+    return render_template('index.html', title="Welcome")
 
-@app.route("/", methods=['POST'])
-def add_result():
-    list_result = Game(player1_name, player1_choice_move, player2_name, player2_choice_move)
-    return render_template('index.html', title="Welcome", games=games)
+@app.route("/<move1>/<move2>")
+def index_results(move1, move2):
+    play_game(move1, move2)
+    outcome = play_game(move1, move2)
+    return render_template('playgame.html', title="Game", winner=play_game(move1, move2))
 
-@app.route("/rock/scissors")
-def play_game(player1_name, player2_name):
-    return f"{player1_name} wins by playing {player1_choice_move}"
+# @app.route("/<move1>/<move2>")
+# def play_game(player1_name, player2_name):
+#     return f"{player1_name} wins by playing {move1}"
 
 # @app.route("/rock/paper")
 # def rock_paper_loss
