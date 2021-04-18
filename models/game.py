@@ -14,4 +14,4 @@ def winning_player(gesture1, gesture2):
     if gesture1 == gesture2:
         return "draw"
         
-    return player_2
+    return None

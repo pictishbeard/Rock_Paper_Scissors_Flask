@@ -6,7 +6,7 @@ from models.player import Player
 
 
 @app.route("/")
-def index():
+def index_homepage():
     return render_template('index.html', title="Welcome")
 
 @app.route("/<gesture1>/<gesture2>")
