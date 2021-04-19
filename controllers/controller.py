@@ -11,6 +11,7 @@ def index_homepage():
 
 @app.route("/<gesture1>/<gesture2>")
 def game_result(gesture1, gesture2):
-    winning_player(gesture1, gesture2)
-    result = winning_player(gesture1, gesture2)
+    player1 = Player('Dwayne', gesture1)
+    player2 = Player('Not Dwayne', gesture2)
+    result = winning_player(player1, player2)
     return render_template('playgame.html', title='Play', winner=result)
